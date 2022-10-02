@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>idroHUB</title>
+    <meta name="author" content="DvDRaga">
+    <meta name="description" content="Calcoli vari relativi alla progettazione idraulica.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resource/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/site.webmanifest">
+    <link href="/resource/font/font_style.css" rel="stylesheet">
+    <link href="/css/dim_tubazioni.css" rel="stylesheet">
+    <script src="/resource/data.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="/"><h1><img src="/resource/droplet.png" alt="">idroHUB</h1></a>
+    </div>
+    <div class="content">
+      <div class="input_row">
+        <p class="label">PORTATA:</p><input type="number" name="portata" id="portata"><p class="unit">l/h</p>
+      </div>
+      <div class="input_row">
+        <p class="label">t°:</p><select name="temperature" id="temperatura" >
+          <option value="0">0</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40" selected>40</option>
+          <option value="60">60</option>
+          <option value="80">80</option>
+          <option value="100">100</option>
+        </select><p class="unit">°C</p>
+      </div>
+      <div class="calc_button" onclick="calc()">CALCOLA</div>
+      <div class="result_content">
+        <table>
+          <tr>
+            <th>D</th>
+            <th>r</th>
+            <th>v</th>
+          </tr>
+          <tr>
+            <th>16 - 3/8"&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>20 - 1/2"&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>26 - 3/4"&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>32 - 1"&nbsp;&nbsp;&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>40 - 1"1/4</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>50 - 1"1/2</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>63 - 2"&nbsp;&nbsp;&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>75 - 2"1/2</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>90 - 3"&nbsp;&nbsp;&nbsp;</th>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="/js/dim_tubazioni.js"></script>
+  </body>
+
+</html>
