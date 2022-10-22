@@ -249,6 +249,11 @@ thead, tbody, tr {
 }
 /*---- END CALCOLO RADIATORI ----*/
 
+/*---- HIDE OBJECT ----*/
+.hidden {
+    display: none;
+}
+/*---- END HIDE OBJECT ----*/
 
 #devlp {
     margin-top: 2rem;

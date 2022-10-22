@@ -1,0 +1,33 @@
+<div id="calcolo_sezione_aria" onkeydown="if (event.keyCode === 13) calcoloSezioneAria()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">FORMA:</p>
+            <select name="forma" id="forma" onchange="cambioForma()">
+                <option value="circ" selected="">CIRCOLARE</option>
+                <option value="rett">RETTANGOLARE</option>
+            </select>
+            <p class="unit"></p>
+        </div>
+        <div class="input_row1 hidden" id="container_latoFisso">
+            <p class="label">LATO FISSO:</p>
+            <input type="number" class="input" inputmode="decimal" id="latoFisso" value="" required>
+            <p class="unit">mm</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">PORTATA:</p>
+            <input type="number" class="input" inputmode="decimal" id="portata" value="" required>
+            <p class="unit">mc/h</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">VELOCITA':</p>
+            <input type="number" class="input" inputmode="decimal" id="maxV" value="4" required>
+            <p class="unit">m/s</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloSezioneAria()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container">
+            <p>DIAMETRO:</p><p class="row_value" id="sezione">0</p><p>mm</p>
+        </div>
+    </div>
+</div>
