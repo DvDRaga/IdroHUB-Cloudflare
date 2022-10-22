@@ -11,7 +11,7 @@ let calcoloSezioneAria = () => {
 
     document.getElementsByClassName("result_row_container")[0].style.borderColor = "rgb(54, 110, 214)"
 }
-let cambioForma = () => {
+let cambioFormaSezione = () => {
     let forma = document.getElementById("forma").value
 
     if (forma === "circ") {

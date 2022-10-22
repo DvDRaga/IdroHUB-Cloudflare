@@ -142,6 +142,9 @@ body {
     padding-right: .2rem;
     border-radius: 0;
 }
+.input_row1>.span2 {
+    grid-column: span 2;
+}
 /*---- END INPUTS ----*/
 
 /*---- INPUT NUMBER BROWSER RESET ----*/

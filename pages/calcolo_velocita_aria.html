@@ -1,0 +1,37 @@
+<div id="calcolo_sezione_aria" onkeydown="if (event.keyCode === 13) calcoloVelocitaAria()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">FORMA:</p>
+            <select class="span2" name="forma" id="forma" onchange="cambioFormaVelocita()">
+                <option value="circ" selected="">CIRCOLARE</option>
+                <option value="rett">RETTANGOLARE</option>
+            </select>
+        </div>
+        <div class="input_row1 hidden" id="container_latoA">
+            <p class="label">LATO A:</p>
+            <input type="number" class="input" inputmode="decimal" id="latoA" value="" required>
+            <p class="unit">mm</p>
+        </div>
+        <div class="input_row1 hidden" id="container_latoB">
+            <p class="label">LATO B:</p>
+            <input type="number" class="input" inputmode="decimal" id="latoB" value="" required>
+            <p class="unit">mm</p>
+        </div>
+        <div class="input_row1" id="container_diametro">
+            <p class="label">DIAMETRO:</p>
+            <input type="number" class="input" inputmode="decimal" id="diametro" value="" required>
+            <p class="unit">mm</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">PORTATA:</p>
+            <input type="number" class="input" inputmode="decimal" id="portata" value="" required>
+            <p class="unit">mc/h</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloVelocitaAria()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container">
+            <p>VELOCITA':</p><p class="row_value" id="velocita">0.00</p><p>m/s</p>
+        </div>
+    </div>
+</div>
