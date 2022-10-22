@@ -1,0 +1,25 @@
+<div id="tempo_regime" onkeydown="if (event.keyCode === 13) calcoloTempoRegime()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">POTENZA:</p>
+            <input type="number" class="input" inputmode="decimal" id="potenza" value="" required>
+            <p class="unit">W</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">ΔT:</p>
+            <input type="number" class="input" inputmode="decimal" id="deltaT" value="35" required>
+            <p class="unit">°C</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">VOLUME:</p>
+            <input type="number" class="input" inputmode="decimal" id="volume" value="" required>
+            <p class="unit">l</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloTempoRegime()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container2">
+            <p>TEMPO:</p><p class="row_value" id="tempoRegime"></p>
+        </div>
+    </div>
+</div>

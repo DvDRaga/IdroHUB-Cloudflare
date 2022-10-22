@@ -1,0 +1,30 @@
+<div id="calcolo_vaso" onkeydown="if (event.keyCode === 13) calcoloVaso()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">VOLUME:</p>
+            <input type="number" class="input" inputmode="decimal" id="volume" required>
+            <p class="unit">l</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">T° MASSIMA:</p>
+            <input type="number" class="input" inputmode="decimal" id="tMax" value="95" required>
+            <p class="unit">°C</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">P INIZIALE:</p>
+            <input type="number" class="input" inputmode="decimal" id="pI" value="2.5" required>
+            <p class="unit">bar</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">P FINALE:</p>
+            <input type="number" class="input" inputmode="decimal" id="pF" value="4.0" required>
+            <p class="unit">bar</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloVaso()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container">
+            <p>VOLUME VASO:</p><p class="row_value" id="vVaso">0.0</p><p>l</p>
+        </div>
+    </div>
+</div>

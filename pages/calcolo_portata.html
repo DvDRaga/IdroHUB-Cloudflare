@@ -1,0 +1,20 @@
+<div id="calcolo_portata" onkeydown="if (event.keyCode === 13) calcoloPortata()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">POTENZA:</p>
+            <input type="number" class="input" inputmode="decimal" id="potenza" value="" required>
+            <p class="unit">W</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">ΔT:</p>
+            <input type="number" class="input" inputmode="decimal" id="deltaT" value="10" required>
+            <p class="unit">°C</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloPortata()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container">
+            <p>PORTATA:</p><p class="row_value" id="portata">0.0</p><p>l/h</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div id="calcolo_tubazioni" onkeydown="if (event.keyCode === 13) calcoloTubazioni()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">PORTATA:</p>
+            <input type="number" class="input" inputmode="decimal" id="portata" required>
+            <p class="unit">l/h</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">TEMPERATURA:</p>
+            <select name="temperature" id="temperatura">
+                <option value="0">0</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40" selected="">40</option>
+                <option value="60">60</option>
+                <option value="80">80</option>
+                <option value="100">100</option>
+            </select>
+            <p class="unit">°C</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloTubazioni()">CALCOLA</button></div>
+    <div class="result1">
+        <table id="diameter_table">
+            <tr>
+                <th>D</th>
+                <th>r</th>
+                <th>v</th>
+            </tr>
+            <tr>
+                <th>16 - 3/8"&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>20 - 1/2"&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>26 - 3/4"&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>32 - 1"&nbsp;&nbsp;&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>40 - 1"1/4</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>50 - 1"1/2</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>63 - 2"&nbsp;&nbsp;&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>75 - 2"1/2</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>90 - 3"&nbsp;&nbsp;&nbsp;</th>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>

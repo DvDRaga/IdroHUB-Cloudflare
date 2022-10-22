@@ -1,0 +1,531 @@
+<div id="calcolo_vaso" onkeydown="if (event.keyCode === 13) calcoloRadiatori()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">POTENZA:</p>
+            <input type="number" class="input" inputmode="decimal" id="fabbisogno" required>
+            <p class="unit">W</p>
+        </div>
+        <div class="input_row1">
+            <p class="label">ΔT:</p>
+            <input type="number" class="input" inputmode="decimal" id="deltaT" value="50" required>
+            <p class="unit">°C</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloRadiatori()">CALCOLA</button></div>
+    <div class="result1 radiator_result">
+        <table id="radiator_table">
+            <tr>
+                <th>&nbsp;</th>
+                <th class="radiator_head">TESI 2</th>
+                <th class="radiator_head">TESI 3</th>
+                <th class="radiator_head">TESI 4</th>
+                <th class="radiator_head">TESI 5</th>
+                <th class="radiator_head">TESI 6</th>
+            </tr>
+            <tr>
+                <th>H</th>
+                <th>N° EL.</th>
+                <th>LARGH.</th>
+                <th>P BATT.</th>
+                <th>N° EL.</th>
+                <th>LARGH.</th>
+                <th>P BATT.</th>
+                <th>N° EL.</th>
+                <th>LARGH.</th>
+                <th>P BATT.</th>
+                <th>N° EL.</th>
+                <th>LARGH.</th>
+                <th>P BATT.</th>
+                <th>N° EL.</th>
+                <th>LARGH.</th>
+                <th>P BATT.</th>
+            </tr>
+            <tr>
+                <th>200</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>300</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>400</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>500</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>565</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>595</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>600</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>635</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>665</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>685</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>750</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>765</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>795</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>865</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>885</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>900</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>935</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1000</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1200</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1500</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1665</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1800</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>1865</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>2000</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>2065</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>2200</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+            <tr>
+                <th>2500</th>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi2"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi3"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi4"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi5"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+                <td class="tesi6"></td>
+            </tr>
+        </table>
+    </div>
+</div>

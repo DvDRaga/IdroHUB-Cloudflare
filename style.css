@@ -1,0 +1,271 @@
+:root {
+    --header-height: 6rem;
+    --button1-height: 4rem;
+    --button1-width: 23rem;
+    --button2-height: 3rem;
+    --button2-width: 27rem;
+}
+
+/*---- FONT ----*/
+@font-face {
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url("/resources/RobotoMono-Regular.ttf") format("truetype")
+}
+@font-face {
+    font-family: 'RobotoMono';
+    font-style: bold;
+    font-weight: 700;
+    src: local(''), url("/resources/RobotoMono-Bold.ttf") format("truetype")
+}
+/*---- END FONT ----*/
+
+/*---- GENERAL STYLING ----*/
+* {
+    background-color: rgb(37,37,37);
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "RobotoMono";
+    font-size: 1rem;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+/*---- END GENERAL STYLING ----*/
+
+/*---- HEADER ----*/
+#head {
+    height: var(--header-height);
+    width: 100%;
+    background-color: rgb(54, 110, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+#page-title, #logo {
+    cursor: pointer;
+    background-color: inherit;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 3rem;
+}
+/*---- END HEADER ----*/
+
+/*---- CONTAINER ----*/
+#container {
+    padding: 1rem;
+    height: calc(100% - var(--header-height) - 2rem);
+    width: calc(100% - 2rem);
+    position: fixed;
+    top: var(--header-height);
+    overflow-y: auto;
+}
+/*---- END CONTAINER ----*/
+
+/*---- HOME MENU CONTAINER ----*/
+#menu {
+    width: 100%;
+    max-width: calc(var(--button1-width) * 2 + 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: auto;
+}
+/*---- END HOME MENU CONTAINER ----*/
+
+/*---- BUTTON1 ----*/
+.button1 {
+    background-color: rgb(57,57,57);
+    height: var(--button1-height);
+    width: 100%;
+    max-width: var(--button1-width);
+    padding: 0 .5rem;
+    border-bottom: 2px solid rgb(54, 110, 214);
+}
+.button1:hover {
+    background-color: rgb(54, 110, 214);
+    transition: 250ms;
+    cursor: pointer;
+}
+/*---- END BUTTON1 ----*/
+
+/*---- BUTTON2 ----*/
+.button2 {
+    background-color: rgb(57,57,57);
+    height: var(--button2-height);
+    width: 100%;
+    max-width: var(--button2-width);
+    border-bottom: 2px solid white;
+}
+.button2:hover {
+    border-bottom: 2px solid rgb(54, 110, 214);
+    transition: 250ms;
+    cursor: pointer;
+}
+#button2_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/*---- END BUTTON2 ----*/
+
+/*---- INPUTS ----*/
+.inputs1 {
+    display: grid;
+    grid-template-columns: max-content minmax(6rem, 1fr) max-content;
+    row-gap: 1rem;
+    width: 100%;
+    max-width: var(--button2-width);
+    margin: auto;
+    padding-bottom: 1rem;
+}
+.input_row1 {
+    display: contents;
+}
+.input_row1>* {
+    border-bottom: 2px solid white;
+    padding-bottom: .2rem;
+}
+.input_row1:focus-within>* {
+    border-bottom: 2px solid rgb(54, 110, 214);
+    transition: 250ms;
+}
+.input_row1>input, .input_row1>select {
+    text-align: right;
+    text-align-last: right;
+    padding-right: .2rem;
+    border-radius: 0;
+}
+/*---- END INPUTS ----*/
+
+/*---- INPUT NUMBER BROWSER RESET ----*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/*---- END INPUT NUMBER BROWSER RESET ----*/
+
+/*---- CALCOLO TUBAZIONI ----*/
+thead, tbody, tr {
+    display: contents;
+}
+#diameter_table {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    max-width: var(--button2-width);
+    margin: auto;
+    margin-top: 1rem;
+    align-content: center;
+}
+#diameter_table>tbody>tr>td, #diameter_table>tbody>tr>th {
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding: 1rem .5rem .1rem .5rem;
+}
+/*---- END CALCOLO TUBAZIONI ----*/
+
+/*---- ROW RESULT ----*/
+.result_row_container {
+    max-width: calc(var(--button2-width) - 2 * 1rem - 2 * 2px); /* Tolto dalla larghezza padding e border */
+    width: calc(100%  - 2 * 1rem - 2 * 2px);
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    row-gap: 1rem;
+}
+.result_row_container>.row_value {
+    justify-self: right;
+    padding-right: .2rem;
+}
+/*---- END ROW RESULT ----*/
+
+/*---- ROW RESULT 2 ----*/
+.result_row_container2 {
+    max-width: calc(var(--button2-width) - 2 * 1rem - 2 * 2px); /* Tolto dalla larghezza padding e border */
+    width: calc(100%  - 2 * 1rem - 2 * 2px);
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    row-gap: 1rem;
+}
+.result_row_container2>.row_value {
+    justify-self: right;
+}
+/*---- END ROW RESULT 2 ----*/
+
+
+/*---- CALCOLO RADIATORI ----*/
+#radiator_table {
+    display: grid;
+    grid-template-columns: repeat(16, minmax(max-content, 1fr));
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 1rem;
+    align-content: center;
+    overflow-x: auto;
+}
+.radiator_head {
+    grid-column: span 3;
+}
+#radiator_table>tbody>tr>td, #radiator_table>tbody>tr>th {
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding: .2rem .5rem .1rem .5rem;
+}
+#radiator_table>tbody>tr>th:nth-child(1) {
+    position: sticky;
+    left: 0;
+}
+#radiator_table>tbody>tr:nth-child(-n+2)>* {
+    border-bottom: 2px solid rgb(54, 110, 214);
+}
+#radiator_table>tbody>tr:nth-child(1)>th:nth-child(even),
+#radiator_table>tbody>tr:nth-child(n+2)>*:nth-child(6n+2),
+#radiator_table>tbody>tr:nth-child(n+2)>*:nth-child(6n+3),
+#radiator_table>tbody>tr:nth-child(n+2)>*:nth-child(6n+4) {
+    background-color: rgb(57,57,57);
+}
+/*---- END CALCOLO RADIATORI ----*/
+
+
+#devlp {
+    margin-top: 2rem;
+    height: 8rem;
+}
+
+/*---- STILE SCROLLBAR ----*/
+::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(37,37,37);
+    border-radius:0px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(57,57,57);
+    border-radius:0px;
+}
+/*---- END STILE SCROLLBAR ----*/

@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+    <meta name="theme-color" content="#252525">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/favicon/site.webmanifest">
+    <script src="/resources/data.js" defer></script>
+    <script src="/scripts/calcolo_tubazioni.js"></script>
+    <script src="/scripts/calcolo_vaso.js"></script>
+    <script src="/scripts/calcolo_radiatori.js"></script>
+    <script src="/scripts/calcolo_portata.js"></script>
+    <script src="/scripts/tempo_regime.js"></script>
     <title>idroHUB</title>
-    <meta name="author" content="DvDRaga">
-    <meta name="description" content="Calcoli vari relativi alla progettazione idraulica.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/resource/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/resource/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/resource/icon/favicon-16x16.png">
-    <link rel="manifest" href="/resource/icon/site.webmanifest">
-    <link href="/resource/font/font_style.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
-    <script src="/js/index.js"></script>
-  </head>
-
-  <body>
-    <div class="header">
-      <h1><img src="/resource/droplet.png" alt="">idroHUB</h1>
+<body>
+    <div id="head">
+        <img src="/resources/droplet.png" alt="logo" id="logo" onclick="nav('home')">
+        <h1 id="page-title" onclick="nav('home')">idroHUB</h1>
     </div>
-    
-    <div class="content">
-      <ul>
-        <li><a href="/pages/dim_tubazioni.html">DIMENSIONAMENTO TUBAZIONI</a></li>
-        <li><a href="/pages/dim_radiatori.html">DIMENSIONAMENTO RADIATORI</a></li>
-        <li><a href="/pages/dim_vaso.html">DIMENSIONAMENTO VASO DI ESPANSIONE</a></li>
-        <li><a href="/pages/under_construction.html">DIMENSIONAMENTO TUBAZIONI GAS</a></li>
-        <li><a href="/pages/under_construction.html">TEMPO DI REGIME</a></li>
-      </ul>
+    <div id="container">
     </div>
-    
-    <div class="creditsBut" onclick="toggleCredits()">i</div>
-    <div id="credits" onclick="toggleCredits()" style="display:none"><p>Created with HTML, CSS, JS and &#10084<br><br>by<br><br><br><b>David R.</b></p></div>
-    
-  </body>
+    <script>
+        'use strict'
+        function nav(page) {
+            fetch('/pages/' + page + '.html')
+                .then(response => response.text())
+                .then(pageContent => document.getElementById("container").innerHTML = pageContent)
+        }
+        nav("home")
+    </script>
+</body>
 
 </html>
