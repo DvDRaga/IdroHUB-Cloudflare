@@ -2,6 +2,7 @@
 let calcoloRadiatori = () => {
     let fabb = document.getElementById("fabbisogno").value
     let deltaT = document.getElementById("deltaT").value
+    let larghezzaMax = document.getElementById("larghezzaMax").value
 
     for (let i = 0; i < 27; i++) {
         for (let j = 2; j < 7; j++) {
@@ -13,6 +14,11 @@ let calcoloRadiatori = () => {
                 nEl.innerHTML = Math.ceil(fabb / (data.acciaio["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.acciaio["tesi" + j].exp[i])))
                 largBat.innerHTML = nEl.innerHTML * 45 + " mm"
                 pBat.innerHTML = Math.floor(nEl.innerHTML * (data.acciaio["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.acciaio["tesi" + j].exp[i]))) + " W"
+                if (nEl.innerHTML * 45 < larghezzaMax) {
+                    nEl.style.borderBottom = "2px solid rgb(54, 110, 214)"
+                    largBat.style.borderBottom = "2px solid rgb(54, 110, 214)"
+                    pBat.style.borderBottom = "2px solid rgb(54, 110, 214)"
+                }
             } else {
                 nEl.innerHTML = "-"
                 largBat.innerHTML = "-"
