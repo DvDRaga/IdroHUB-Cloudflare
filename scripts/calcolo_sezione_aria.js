@@ -16,10 +16,10 @@ let cambioFormaSezione = () => {
 
     if (forma === "circ") {
         document.getElementById("container_latoFisso").classList.add("hidden")
-        document.querySelector(".result_row_container>p:nth-child(1)").innerHTML = "DIAMETRO"
+        document.querySelector(".result_row_container>p:nth-child(1)").innerHTML = "DIAMETRO:"
     }
     if (forma === "rett") {
         document.getElementById("container_latoFisso").classList.remove("hidden")
-        document.querySelector(".result_row_container>p:nth-child(1)").innerHTML = "LATO"
+        document.querySelector(".result_row_container>p:nth-child(1)").innerHTML = "LATO:"
     }
 }
