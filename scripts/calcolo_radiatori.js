@@ -9,10 +9,10 @@ let calcoloRadiatori = () => {
             let largBat = document.getElementsByClassName("tesi" + j)[3 * i + 1]
             let pBat = document.getElementsByClassName("tesi" + j)[3 * i + 2]
 
-            if (data.rad["tesi" + j].rese[i] != undefined) {
-                nEl.innerHTML = Math.ceil(fabb / (data.rad["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.rad["tesi" + j].exp[i])))
+            if (data.acciaio["tesi" + j].rese[i] != undefined) {
+                nEl.innerHTML = Math.ceil(fabb / (data.acciaio["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.acciaio["tesi" + j].exp[i])))
                 largBat.innerHTML = nEl.innerHTML * 45 + " mm"
-                pBat.innerHTML = Math.floor(nEl.innerHTML * (data.rad["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.rad["tesi" + j].exp[i]))) + " W"
+                pBat.innerHTML = Math.floor(nEl.innerHTML * (data.acciaio["tesi" + j].rese[i] * Math.pow(deltaT / 50, data.acciaio["tesi" + j].exp[i]))) + " W"
             } else {
                 nEl.innerHTML = "-"
                 largBat.innerHTML = "-"

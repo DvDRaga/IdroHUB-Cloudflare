@@ -1,0 +1,39 @@
+<div id="calcolo_resa_radiatore" onkeydown="if (event.keyCode === 13) calcoloResaRadiatore()">
+    <div class="inputs1">
+        <div class="input_row1">
+            <p class="label">TIPOLOGIA:</p>
+            <select class="span2" name="tipo" id="tipologia" onchange="cambioTipologia()">
+                <option value="" selected></option>
+                <option value="acciaio">ACCIAIO</option>
+                <option value="ghisa">GHISA</option>
+                <option value="alluminio">ALLUMINIO</option>
+                <option value="piastra">PIASTRA</option>
+            </select>
+        </div>
+        <div class="input_row1">
+            <p class="label">COLONNE:</p>
+            <select class="span2" name="colonne" id="colonne" onchange="cambioColonne()">
+            </select>
+        </div>
+        <div class="input_row1">
+            <p class="label">ALTEZZA:</p>
+            <select class="span2" name="altezza" id="altezza">
+            </select>
+        </div>
+        <div class="input_row1">
+            <p class="label">N° ELEMENTI:</p>
+            <input type="number" class="input span2" inputmode="numeric" id="elements" value="10" required>
+        </div>
+        <div class="input_row1">
+            <p class="label">ΔT:</p>
+            <input type="number" class="input" inputmode="decimal" id="deltaT" value="50" required>
+            <p class="unit">°C</p>
+        </div>
+    </div>
+    <div id="button2_container"><button class="button2" onclick="calcoloResaRadiatore()">CALCOLA</button></div>
+    <div class="result1">
+        <div class="result_row_container">
+            <p>RESA:</p><p class="row_value" id="resa">0</p><p>W</p>
+        </div>
+    </div>
+</div>
