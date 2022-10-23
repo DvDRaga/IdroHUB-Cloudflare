@@ -18,6 +18,10 @@ let calcoloRadiatori = () => {
                     nEl.style.borderBottom = "2px solid rgb(54, 110, 214)"
                     largBat.style.borderBottom = "2px solid rgb(54, 110, 214)"
                     pBat.style.borderBottom = "2px solid rgb(54, 110, 214)"
+                } else {
+                    nEl.style.borderBottom = "2px solid white"
+                    largBat.style.borderBottom = "2px solid white"
+                    pBat.style.borderBottom = "2px solid white"
                 }
             } else {
                 nEl.innerHTML = "-"
